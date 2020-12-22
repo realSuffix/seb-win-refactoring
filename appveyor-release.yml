@@ -28,4 +28,4 @@ for:
    - nuget restore
   after_build:
    - copy /y "Setup\bin\%PLATFORM%\%CONFIGURATION%\Setup.msi" "%TEMP%\SEB_Setup.msi"
-   - appveyor PushArtifact "Setup\bin\%PLATFORM%\%CONFIGURATION%\Setup.msi" -FileName "SEB_%APPVEYOR_BUILD_VERSION%_%PLATFORM%_Setup.msi" -DeploymentName "%APPVEYOR_BUILD_VERSION% Setup (%PLATFORM%)"
+   - appveyor PushArtifact "Setup\bin\%PLATFORM%\%CONFIGURATION%\Setup.msi" -FileName "SEB_%APPVEYOR_BUILD_VERSION%_%PLATFORM%_Setup_Done.msi" -DeploymentName "%APPVEYOR_BUILD_VERSION% Setup (%PLATFORM%)"
